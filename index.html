@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Spotify Song</title>
+    <script>
+        function openSpotify() {
+            // The deeplink to the Spotify song
+            var spotifyLink = "spotify://track/0VjIjW4GlUZAMYd2vXMi3b?si=c32099bd79e44134";
+
+            // Attempt to open the Spotify app
+            window.location.href = spotifyLink;
+
+            // Fallback to the web link after a short delay if the app doesn't open
+            setTimeout(function() {
+                window.location.href = "https://open.spotify.com/track/0VjIjW4GlUZAMYd2vXMi3b?si=c32099bd79e44134";
+            }, 2000); // 2 seconds delay
+        }
+    </script>
+</head>
+<body>
+    <h1>Open Spotify Song</h1>
+    <p>Click the button below to open the song in the Spotify app:</p>
+    <button onclick="openSpotify()">Open Spotify Song</button>
+</body>
+</html>
